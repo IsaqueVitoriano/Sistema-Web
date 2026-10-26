@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faça o seu pedido</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/logotipo-jp-semfundo.svg"
+    />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="cabecalho-principal">
+      <div class="logo">
+        <img src="assets/logotipo-jp.svg" alt="Logotipo" class="icone-logo" />
+        <span>JP Água & Gás</span>
+      </div>
+    </header>
+
+    <main class="container-principal">
+      <section class="area-pedido">
+        <article class="cartao-formulario">
+          <h2>Fazer pedido</h2>
+
+          <form id="form-pedido">
+            <div class="grupo-entrada quantidade">
+              <label for="qtd_garrafoes">Quantidade de garrafões</label>
+              <div class="controle-quantidade">
+                <button type="button" class="btn-menos">-</button>
+                <input
+                  type="number"
+                  id="qtd_garrafoes"
+                  value="1"
+                  min="1"
+                  required
+                />
+                <button type="button" class="btn-mais">+</button>
+              </div>
+            </div>
+
+            <div class="grupo-entrada">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Seu nome" required />
+            </div>
+
+            <div class="grupo-entrada">
+              <label for="telefone">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                placeholder="(85) 99999-9999"
+                required
+              />
+            </div>
+
+            <div class="grupo-entrada">
+              <label for="endereco">Endereço</label>
+              <textarea
+                id="endereco"
+                rows="2"
+                placeholder="Rua, número, bairro, complemento"
+                required
+              ></textarea>
+            </div>
+
+            <fieldset class="grupo-pagamento">
+              <legend>Forma de pagamento</legend>
+              <div class="opcoes-pagamento">
+                <label class="opcao">
+                  <input type="radio" name="pagamento" value="pix" checked />
+                  <span>Pix</span>
+                </label>
+                <label class="opcao">
+                  <input type="radio" name="pagamento" value="dinheiro" />
+                  <span>Dinheiro</span>
+                </label>
+                <label class="opcao">
+                  <input type="radio" name="pagamento" value="cartao" />
+                  <span>Cartão</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="resumo-pedido">
+              <span class="texto-total">Total</span>
+              <strong class="valor-total">R$ 6,50</strong>
+            </div>
+
+            <a href="#modal-resumo" id="btn-abrir-modal" class="btn-primario">
+              Confirmar pedido
+            </a>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <div id="modal-resumo" class="modal oculto">
+      <div class="modal-conteudo cartao-formulario">
+        <h2>Revise seu pedido</h2>
+        <div class="detalhes-resumo">
+          <p><strong>Garrafões:</strong> <span id="resumo-qtd"></span></p>
+          <p><strong>Nome:</strong> <span id="resumo-nome"></span></p>
+          <p><strong>Telefone:</strong> <span id="resumo-telefone"></span></p>
+          <p><strong>Endereço:</strong> <span id="resumo-endereco"></span></p>
+          <p><strong>Pagamento:</strong> <span id="resumo-pagamento"></span></p>
+        </div>
+
+        <div class="resumo-pedido">
+          <span class="texto-total">Total a pagar:</span>
+          <strong class="valor-total" id="resumo-total"></strong>
+        </div>
+
+        <div class="acoes-modal">
+          <a href="#" id="btn-voltar" class="btn-secundario">
+            Voltar e editar pedido
+          </a>
+          <a href="#" id="btn-finalizar" class="btn-primario">
+            Tudo certo, pedir!
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
