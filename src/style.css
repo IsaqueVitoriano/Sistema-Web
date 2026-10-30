@@ -255,3 +255,143 @@ a {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
+
+.container-painel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 5%;
+}
+
+.container-painel h1 {
+  margin-bottom: 2rem;
+  color: #002347;
+}
+
+.resumo-metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cartao-metrica {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cartao-metrica h3 {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: normal;
+}
+
+.valor-metrica {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-top: 0.5rem;
+}
+
+.filtros-status {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.btn-filtro {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.btn-filtro.ativo {
+  background-color: #002347;
+  color: #ffffff;
+  border-color: #002347;
+}
+
+.tabela-responsiva {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.tabela-dados {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.tabela-dados th,
+.tabela-dados td {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eef8ff;
+}
+
+.tabela-dados th {
+  background-color: #eef8ff;
+  color: #64748b;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.dados-cliente strong {
+  display: block;
+}
+
+.dados-cliente span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.destaque-qtd {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.etiqueta {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-pendente {
+  background-color: #ffedd5;
+  color: #c2410c;
+}
+
+.status-rota {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.status-concluido {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.btn-acao {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-rota {
+  background-color: #0077c2;
+}
+
+.btn-entregue {
+  background-color: #15803d;
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Entregas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/logotipo-jp-semfundo.svg"
+    />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="cabecalho-principal">
+      <div class="logo">
+        <img src="assets/logotipo-jp.svg" alt="Logotipo" class="icone-logo" />
+        <span>JP Água & Gás</span>
+      </div>
+    </header>
+
+    <main class="container-painel">
+      <h1>Painel de entregas</h1>
+
+      <section class="resumo-metricas">
+        <div class="cartao-metrica">
+          <h3>Pedidos hoje</h3>
+          <p class="valor-metrica">3</p>
+        </div>
+        <div class="cartao-metrica">
+          <h3>Pendentes</h3>
+          <p class="valor-metrica">1</p>
+        </div>
+        <div class="cartao-metrica">
+          <h3>Garrafões a entregar</h3>
+          <p class="valor-metrica">3</p>
+        </div>
+        <div class="cartao-metrica">
+          <h3>Faturado</h3>
+          <p class="valor-metrica">R$ 36</p>
+        </div>
+      </section>
+
+      <section class="controle-pedidos">
+        <menu class="filtros-status">
+          <li><button class="btn-filtro ativo">Todos</button></li>
+          <li><button class="btn-filtro">Pendente</button></li>
+          <li><button class="btn-filtro">Em rota</button></li>
+          <li><button class="btn-filtro">Entregue</button></li>
+        </menu>
+
+        <div class="tabela-responsiva">
+          <table class="tabela-dados">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Qtd.</th>
+                <th>Endereço</th>
+                <th>Pagamento</th>
+                <th>Status</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="dados-cliente">
+                  <strong>Maria Silva</strong>
+                  <span>(85) 92341-3486</span>
+                </td>
+                <td class="destaque-qtd">2</td>
+                <td>Rua Principal, 120 - Combate</td>
+                <td>Pix</td>
+                <td><span class="etiqueta status-pendente">Pendente</span></td>
+                <td>
+                  <button class="btn-acao btn-rota">Marcar em rota</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="dados-cliente">
+                  <strong>João Santos</strong>
+                  <span>(85) 98938-6792</span>
+                </td>
+                <td class="destaque-qtd">1</td>
+                <td>Rua do Triângulo, 1091 - Centro</td>
+                <td>Dinheiro</td>
+                <td><span class="etiqueta status-rota">Em rota</span></td>
+                <td>
+                  <button class="btn-acao btn-entregue">Marcar entregue</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="dados-cliente">
+                  <strong>Ana Costa</strong>
+                  <span>(85) 92348-3224</span>
+                </td>
+                <td class="destaque-qtd">3</td>
+                <td>Rua Padre Conceição, 78 - Planalto Universitário</td>
+                <td>Cartão</td>
+                <td><span class="etiqueta status-concluido">Entregue</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
