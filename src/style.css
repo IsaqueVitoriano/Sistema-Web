@@ -117,6 +117,8 @@ a {
   border: none;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .grupo-pagamento legend {
@@ -394,4 +396,109 @@ a {
 
 .btn-entregue {
   background-color: #15803d;
+}
+
+@media (max-width: 768px) {
+  .cabecalho-principal {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .container-principal {
+    flex-direction: column;
+    padding: 1rem 5%;
+    text-align: left;
+  }
+
+  .info-servico h1 {
+    font-size: 2.2rem;
+  }
+
+  .destaques {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .area-pedido {
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .cartao-formulario {
+    padding: 1.5rem;
+  }
+
+  .controle-quantidade {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #qtd_garrafoes {
+    width: 50%;
+  }
+
+  .btn-primario {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .filtros-status {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .btn-filtro {
+    white-space: nowrap;
+  }
+
+  .tabela-responsiva {
+    background-color: transparent;
+    box-shadow: none;
+    overflow-x: hidden;
+  }
+
+  .tabela-dados,
+  .tabela-dados tbody,
+  .tabela-dados tr,
+  .tabela-dados td {
+    display: block;
+    width: 70%;
+  }
+
+  .tabela-dados thead {
+    display: none;
+  }
+
+  .tabela-dados tr {
+    background-color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #cbd5e1;
+    text-align: center;
+  }
+
+  .tabela-dados td {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #eef8ff;
+    word-break: break-word;
+  }
+
+  .tabela-dados td:last-child {
+    border-bottom: none;
+    padding-top: 1rem;
+  }
+
+  .dados-cliente strong {
+    font-size: 1.2rem;
+  }
+
+  .destaque-qtd::before {
+    content: "Quantidade: ";
+    font-weight: normal;
+  }
 }
