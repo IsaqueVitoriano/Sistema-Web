@@ -49,4 +49,3 @@ Abaixo estão as capturas de tela do protótipo finalizado, demonstrando a respo
 
 * **HTML5 Semântico**
 * **CSS3**
-```
